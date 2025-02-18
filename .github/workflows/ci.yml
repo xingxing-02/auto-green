@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "6 19 * * *"
 
 jobs:
   autogreen:
@@ -20,8 +20,8 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v3
 
-      - name: Auto green
-        run: |
+      - name: 星星
+        run: xingxing-02 |
           git config --local user.email "cdncomco@gmail.com"
           git config --local user.name "cdncomco"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
